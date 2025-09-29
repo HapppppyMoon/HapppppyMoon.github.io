@@ -1,0 +1,13 @@
+main:
+  - title: "About"
+    url: /
+  - title: "Research Log"
+    url: /categories/projects/
+  - title: "Paper Review"
+    url: /categories/papers/
+  - title: "Tech Notes"
+    url: /categories/tech-tips/
+  - title: "Daily"
+    url: /categories/daily/
+  - title: "CV"
+    url: /cv.pdf

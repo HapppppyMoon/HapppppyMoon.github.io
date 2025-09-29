@@ -1,0 +1,183 @@
+/* 불필요한 UI 요소 숨기기 */
+
+/* Post navigation (Previous/Next) 숨기기 */
+.pagination--pager {
+  display: none !important;
+}
+
+/* 페이지 하단 post navigation 숨기기 */
+nav.pagination {
+  display: none !important;
+}
+
+/* Share buttons 완전 제거 (혹시 남아있을 경우) */
+.page__share {
+  display: none !important;
+}
+
+/* Related posts 섹션 제거 */
+.page__related {
+  display: none !important;
+}
+
+/* 읽기 시간 제거 */
+.page__meta-readtime {
+  display: none !important;
+}
+
+/* 페이지 날짜 메타 정보 간소화 */
+.page__date {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+/* 더 깔끔한 포스트 레이아웃 */
+.page__content {
+  font-size: 1em;
+  line-height: 1.8;
+  background: linear-gradient(to bottom, rgba(31, 31, 31, 0.3), rgba(31, 31, 31, 0.8));
+  padding: 2em;
+  border-radius: 12px;
+  margin-top: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* 제목 스타일링 */
+.page__title {
+  padding-bottom: 1em;
+  margin-bottom: 0;
+  border-bottom: 2px solid rgba(100, 181, 246, 0.2);
+  position: relative;
+}
+
+/* 제목 아래 그라데이션 효과 */
+.page__title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, #64b5f6, transparent);
+}
+
+/* 메타 정보와 본문 사이 간격 */
+.page__meta {
+  margin-bottom: 2em;
+}
+
+/* TOC 스타일 개선 */
+.toc {
+  font-size: 0.9em;
+  background: rgba(30, 30, 30, 0.8);
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid rgba(100, 181, 246, 0.1);
+}
+
+/* TOC가 있을 때 본문 스타일 조정 */
+.sidebar__right.sticky {
+  background: transparent !important;
+}
+
+.toc .nav__title {
+  background: rgba(100, 181, 246, 0.1);
+  color: #64b5f6;
+  padding: 0.5em;
+  border-radius: 4px;
+  margin-bottom: 0.5em;
+}
+
+/* 저자 프로필 위치 조정 - 제거하여 기본 동작 유지 */
+
+/* 메인 페이지 스타일 개선 */
+.layout--single .page__content {
+  max-width: 100%;
+}
+
+/* TOC만 오른쪽으로 이동 */
+@media (min-width: 64em) {
+  .sidebar__right {
+    position: sticky !important;
+    top: 2em !important;
+    left: 30px !important;
+  }
+}
+
+@media (min-width: 80em) {
+  .sidebar__right {
+    position: sticky !important;
+    top: 2em !important;
+    left: 50px !important;
+  }
+}
+
+/* 홈페이지(About) 특별 스타일 */
+.layout--single.page:not(.archive) .page__content {
+  background: linear-gradient(135deg, rgba(31, 31, 31, 0.5), rgba(25, 25, 25, 0.8));
+}
+
+/* 아카이브 페이지는 배경 제거 */
+.layout--archive .page__content,
+.layout--categories .page__content,
+.layout--tags .page__content {
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+}
+
+/* 코멘트 섹션 스타일 */
+#utterances-comments {
+  margin-top: 3em;
+  padding-top: 2em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 코드 블록 스타일 개선 */
+.page__content pre {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(100, 181, 246, 0.1);
+  border-radius: 6px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page__content code {
+  background: rgba(40, 40, 40, 0.5);
+  padding: 0.125em 0.25em;
+  border-radius: 3px;
+}
+
+/* 인라인 코드 스타일 */
+.page__content p code,
+.page__content li code {
+  color: #81c784;
+  font-size: 0.95em;
+}
+
+/* 테이블 스타일 */
+.page__content table {
+  background: rgba(25, 25, 25, 0.5);
+  border: 1px solid rgba(100, 181, 246, 0.1);
+}
+
+.page__content th {
+  background: rgba(100, 181, 246, 0.1);
+}
+
+/* 사이드바 sticky 동작 */
+.layout--single .sidebar.sticky {
+  width: 240px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2em;
+  height: auto;
+}
+
+/* 프로필 bio 아래 구분선 */
+.author__bio {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}

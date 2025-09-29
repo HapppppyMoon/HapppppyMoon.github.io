@@ -1,0 +1,35 @@
+---
+title: "Paper Review"
+layout: single
+permalink: /categories/papers/
+author_profile: true
+toc: false
+---
+
+Paper reviews and analysis of recent research trends.
+
+---
+
+## 📖 포스트 목록
+
+{% for post in site.categories.papers %}
+<div style="margin-bottom: 2em;">
+  <h3 style="margin-bottom: 0.5em;">
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </h3>
+  <p style="color: #666; margin-bottom: 0.5em;">
+    <small>{{ post.date | date: "%Y년 %m월 %d일" }}</small>
+    {% if post.tags %}
+      |
+      {% for tag in post.tags %}
+        <span style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 0.85em;">{{ tag }}</span>
+      {% endfor %}
+    {% endif %}
+  </p>
+  {% if post.excerpt %}
+    <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+  {% endif %}
+</div>
+{% else %}
+<p style="color: #999;">아직 작성된 포스트가 없습니다.</p>
+{% endfor %}

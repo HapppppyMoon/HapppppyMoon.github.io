@@ -1,0 +1,192 @@
+# Site Settings
+locale                   : "ko-KR"
+title                    : "Happy Moon Bay"
+title_separator          : "-"
+subtitle                 : "A cozy bay for research and life stories"
+name                     : "HappyMoon"
+description              : "A personal blog about research, development, and life"
+url                      : "https://HapppppyMoon.github.io"
+baseurl                  : ""
+repository               : "HapppppyMoon/HapppppyMoon.github.io"
+teaser                   :
+logo                     :
+masthead_title           : "Happy Moon Bay"
+words_per_minute         : 200
+
+# Comments
+comments:
+  provider               : "utterances"
+  utterances:
+    theme                : "github-dark"
+    issue_term           : "pathname"
+    label                : "comment"
+
+# Search
+search                   : true
+search_full_content      : true
+search_provider          : lunr
+lunr:
+  search_within_pages    : true
+
+# Analytics
+analytics:
+  provider               : "google-gtag"
+  google:
+    tracking_id          : # Google Analytics ID 추가 필요
+    anonymize_ip         : false
+
+# Author
+author:
+  name             : "HappyMoon | Seongjoon Moon"
+  avatar           : "https://github.com/HapppppyMoon.png"
+  bio              : "Ph.D. Candidate<br>ISR Lab @ KU"
+  location         : "Seoul, South Korea"
+  email            : "janismoon@korea.ac.kr"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/HapppppyMoon"
+    - label: "ISR Lab"
+      icon: "fas fa-fw fa-robot"
+      url: "http://isr.korea.ac.kr"
+    - label: "Lab GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ISR-Robotics-Lab"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/seongjoon-moon-75b62b251/"
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/HapppppyMoon"
+    - label: "ISR Lab"
+      icon: "fas fa-fw fa-robot"
+      url: "http://isr.korea.ac.kr"
+    - label: "Lab GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ISR-Robotics-Lab"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 10
+paginate_path: /page:num/
+timezone: Asia/Seoul
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-archives
+  - jemoji
+  - jekyll-remote-theme
+
+# Archives
+jekyll-archives:
+  enabled:
+    # - categories  # 비활성화 - 우리가 만든 카테고리 페이지 사용
+    - tags
+  layouts:
+    category: single
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: true
+      share: false
+      related: false
+      toc: true
+      toc_sticky: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # category pages
+  - scope:
+      path: "_pages/category-*.md"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Theme Settings
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin    : "dark"
