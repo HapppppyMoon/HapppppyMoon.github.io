@@ -1,6 +1,6 @@
 # Site Settings
 locale                   : "ko-KR"
-title                    : "Happy Moon Bay"
+title                    : "🌙 Happy Moon Bay"
 title_separator          : "-"
 subtitle                 : "A cozy bay for research and life stories"
 name                     : "HappyMoon"
@@ -8,9 +8,9 @@ description              : "A personal blog about research, development, and lif
 url                      : "https://HapppppyMoon.github.io"
 baseurl                  : ""
 repository               : "HapppppyMoon/HapppppyMoon.github.io"
-teaser                   :
-logo                     :
-masthead_title           : "Happy Moon Bay"
+teaser                   : /assets/images/og-moon.svg
+logo                     : /assets/images/og-moon.svg
+masthead_title           : "🌙 Happy Moon Bay"
 words_per_minute         : 200
 
 # Comments
