@@ -15,11 +15,9 @@ words_per_minute         : 200
 
 # Comments
 comments:
-  provider               : "utterances"
-  utterances:
-    theme                : "github-dark"
-    issue_term           : "pathname"
-    label                : "comment"
+  provider               : "disqus"
+  disqus:
+    shortname            : "happymoonbay"
 
 # Search
 search                   : true
