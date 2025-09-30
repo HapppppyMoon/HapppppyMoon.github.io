@@ -30,7 +30,7 @@ lunr:
 analytics:
   provider               : "google-gtag"
   google:
-    tracking_id          : # Google Analytics ID 추가 필요
+    tracking_id          : "G-8CXWKKJ6ZH"
     anonymize_ip         : false
 
 # Author
