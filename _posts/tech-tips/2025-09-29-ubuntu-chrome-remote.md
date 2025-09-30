@@ -11,6 +11,32 @@ toc_sticky: true
 
 이 문서는 우분투 22.04 환경에서 크롬 원격 데스크톱(Chrome Remote Desktop)이 새로운 가상 세션을 만들지 않고, **현재 컴퓨터 모니터에 보이는 데스크톱 세션에 직접 연결(미러링)**하도록 설정하는 방법을 안내합니다.
 
+## 🚀 귀찮은 분들을 위한 자동화 스크립트
+
+아래 과정이 복잡하고 귀찮다면? **한 번의 클릭으로 모든 설정을 자동화**할 수 있습니다!
+
+[**ROS2 Humble Setup Tool**](https://github.com/HapppppyMoon/ros2_humble_setup_tool)
+
+이 스크립트는 다음을 자동으로 처리합니다:
+- ✅ Ubuntu 22.04 초기 설정
+- ✅ ROS2 Humble 설치 및 환경 설정
+- ✅ Chrome Remote Desktop 설치 및 미러링 모드 설정
+- ✅ 기타 개발 환경 구성
+
+**사용법:**
+```bash
+git clone https://github.com/HapppppyMoon/ros2_humble_setup_tool.git
+cd ros2_humble_setup_tool
+chmod +x ubuntu_setup.sh
+./ubuntu_setup.sh
+```
+
+도움이 되셨다면 소중한 스타⭐도 부탁드려요!
+
+수동으로 설정하고 싶거나 원리를 이해하고 싶다면 아래 가이드를 따라주세요! 👇
+
+---
+
 ## 0단계: 권장 버전 설치 (Ubuntu 22.04 이상 사용자)
 
 최신 버전의 우분투(22.04 LTS 이상)에서는 최신 크롬 원격 데스크톱 패키지가 정상적으로 작동하지 않을 수 있습니다. 안정적인 연결을 위해 아래의 특정 버전을 수동으로 설치하는 것을 권장합니다.
