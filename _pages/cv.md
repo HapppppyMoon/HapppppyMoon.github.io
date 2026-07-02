@@ -39,7 +39,7 @@ toc_sticky: true
 - **[TODO]** - Papers to be added after publication
 
 ### Journal Papers
-- **[TODO]** - Papers to be added after publication
+- Park, Seihoon, Jinwon Lee, Geonhyeok Park, Ikhyeon Cho, **Seongjoon Moon**, and Woojin Chung. "Robust Multi-Agent Path Finding Method for Obstacles and Environmental Changes in Factory Environments." *Sensors*, vol. 26, no. 13, 2026, article 4139. [https://doi.org/10.3390/s26134139](https://doi.org/10.3390/s26134139).
 
 ## Research Experience
 
@@ -107,4 +107,4 @@ toc_sticky: true
 
 ---
 
-*Last updated: January 2024*
+*Last updated: July 2026*
