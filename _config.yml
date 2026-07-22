@@ -155,6 +155,10 @@ compress_html:
   ignore:
     envs: development
 
+# Custom Scripts (loaded after theme scripts)
+after_footer_scripts:
+  - /assets/js/copy-code.js
+
 # Defaults
 defaults:
   # _posts

@@ -156,6 +156,57 @@ nav.pagination {
   font-size: 0.95em;
 }
 
+/* 코드 블록 복사 버튼 */
+.page__content div.highlighter-rouge,
+.page__content figure.highlight {
+  position: relative;
+}
+
+.copy-code-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  z-index: 1;
+  padding: 0.4em 0.55em;
+  font-size: 0.8em;
+  line-height: 1;
+  color: #9e9e9e;
+  background: rgba(30, 30, 30, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.page__content div.highlighter-rouge:hover .copy-code-button,
+.page__content figure.highlight:hover .copy-code-button,
+.copy-code-button:focus {
+  opacity: 1;
+}
+
+.copy-code-button:hover {
+  color: #64b5f6;
+  border-color: rgba(100, 181, 246, 0.5);
+}
+
+.copy-code-button.copied {
+  color: #81c784;
+  border-color: rgba(129, 199, 132, 0.5);
+}
+
+.copy-code-button.copy-failed {
+  color: #e57373;
+  border-color: rgba(229, 115, 115, 0.5);
+}
+
+/* 터치 기기에서는 항상 표시 (hover 불가) */
+@media (hover: none) {
+  .copy-code-button {
+    opacity: 0.65;
+  }
+}
+
 /* 테이블 스타일 */
 .page__content table {
   background: rgba(25, 25, 25, 0.5);
